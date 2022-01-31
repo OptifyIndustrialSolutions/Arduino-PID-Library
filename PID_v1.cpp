@@ -4,7 +4,9 @@
  *
  * This Library is licensed under the MIT License
  **********************************************************************************************/
-
+/*
+Optify Release
+*/
 #if ARDUINO >= 100
   #include "Arduino.h"
 #else
