@@ -190,6 +190,12 @@ void PID::Initialize()
 {
    outputSum = *myOutput;
    lastInput = *myInput;
+   if(pOnE)
+   {
+      double error = *mySetpoint - lastInput;
+      error = kp * error;
+      outputSum = outputSum - error;
+   }
    if(outputSum > outMax) outputSum = outMax;
    else if(outputSum < outMin) outputSum = outMin;
 }
